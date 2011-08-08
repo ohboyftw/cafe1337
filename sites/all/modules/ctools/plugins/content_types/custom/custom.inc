@@ -174,17 +174,6 @@ function ctools_custom_content_type_render($subtype, $conf, $args, $contexts) {
   }
 
   $block->content = check_markup($content, $settings['format']);
-  if ($settings['custom_type'] == 'fixed' && user_access('administer custom content')) {
-    $block->admin_links = array(
-      array(
-        'title' => t('Configure content pane'),
-        'alt' => t("Configure this pane in administer >> structure >> custom content panes"),
-        'href' => 'admin/structure/ctools-content/list/' . $settings['content']->name . '/edit',
-        'query' => drupal_get_destination(),
-      ),
-    );
-  }
-
   return $block;
 }
 
@@ -311,7 +300,7 @@ function ctools_custom_content_type_edit_form($form, &$form_state) {
       }
     }
     $header = array(t('Keyword'), t('Value'));
-    $form['contexts']['context'] = array('#markup' => theme('table', array('header' => $header, 'rows' => $rows)));
+    $form['contexts']['context'] = array('#value' => theme('table', $header, $rows));
   }
 
   if (!user_access('administer custom content') || !module_exists('ctools_custom_content')) {

@@ -1,0 +1,30 @@
+# Files to be ignored by Git
+
+# Eclipse created configuration files
+
+.buildpath
+.project
+.settings/
+
+# HTTP configuration
+
+.htaccess
+.htpasswd
+
+# Drupal specific files and folders
+
+backup/
+files/
+sites/default/settings.php
+files
+
+# General Wild card entries
+
+*~
+*.swp
+
+# Narrative Specific Entries
+
+cgi-bin/
+legacy/
+email/

@@ -164,8 +164,7 @@ function ctools_export_ui_process(&$plugin, $info) {
       'load arguments' => array($plugin['name']),
       'access callback' => 'ctools_export_ui_task_access',
       'access arguments' => array($plugin['name'], 'edit', $prefix_count + 2),
-      'type' => MENU_DEFAULT_LOCAL_TASK,
-      'weight' => -10,
+      'type' => MENU_CALLBACK,
     ),
   );
 
