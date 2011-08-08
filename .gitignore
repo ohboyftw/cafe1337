@@ -17,6 +17,8 @@ backup/
 files/
 sites/default/settings.php
 files
+sites/default/files
+sites/default/files/
 
 # General Wild card entries
 
